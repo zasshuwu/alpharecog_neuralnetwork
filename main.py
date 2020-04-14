@@ -50,13 +50,7 @@ if (input("Do you want to train a model? yes/no ... ") == "yes" or ""):
     print("Training set score: %f" % mlp2.score(X_train, y_train))
     print("Test set score: %f" % mlp2.score(X_test, y_test))
 
-    # This code processes all the scanned images and adds them to the handwritten_story
-    handwritten_story = []
-    for i in range(len(files)):
-        img = cv2.imread("./letters_mod3/"+files[i],cv2.IMREAD_GRAYSCALE)
-        handwritten_story.append(img)
-
-    print("Imported the scanned images.")
+    
 
     plt.imshow(handwritten_story[4])  #<--- Change this index to see different letters
     with open("./models/trained.pickle", "wb") as f:
@@ -64,6 +58,14 @@ if (input("Do you want to train a model? yes/no ... ") == "yes" or ""):
 else: 
     pickle_in = open("models/trained.pickle", "rb")
     mlp2 = pickle.load(pickle_in)
+
+# This code processes all the scanned images and adds them to the handwritten_story
+handwritten_story = []
+for i in range(len(files)):
+    img = cv2.imread("./letters_mod3/"+files[i],cv2.IMREAD_GRAYSCALE)
+    handwritten_story.append(img)
+
+print("Imported the scanned images.")
 
 typed_story = ""
 for letter in handwritten_story:
