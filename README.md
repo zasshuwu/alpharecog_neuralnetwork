@@ -1,6 +1,6 @@
 # Simple handwriting recognizer (Forked and Cooked)
 
-Original suorce code credits to: crashcourse-ai@github
+Original suorce code credits to: crash-course-ai@github
 
 **Description:**
 
