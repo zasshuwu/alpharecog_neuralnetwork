@@ -1,5 +1,7 @@
 # Simple handwriting recognizer (Forked and Cooked)
 
+Original suorce code credits to: crashcourse-ai@github
+
 **Description:**
 
 This is a recap of what Justin and I have managed to achieve looking into machine learning to recognize handwritten characters generated from the accelerometer data.
